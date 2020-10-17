@@ -1,0 +1,48 @@
+<%- include("partials/header") %>
+
+
+
+<% if(product.length >0){ %>
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <ul class="list-group">
+           <% for(var i=0;i<product.length;i++){ %>
+
+            <li class="list-group-item">
+                <span class=" float-right"><%= product[i].qty %></span>
+                <b><%= product[i].item.title %></b>
+                <span>Rs<%= product[i].item.price %></span>
+                <a href="/reduce/<%= product[i].item._id %>"><i class="fa fa-minus">   </i></a>
+                <a href="/removeAll/<%= product[i].item._id %>"><i class="fa fa-trash"></i></a>
+            </li>
+
+            <%}%>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <b>Total: Rs<%= totalPrice %> </b>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <a href="/checkout" type="button" class="btn btn-success">Place Order</a>
+    </div>
+</div>
+<%}else{%>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <b>No item in cart</b>
+    </div>
+</div>
+<%}%>
+<%- include("partials/footer") %>
+
+
+

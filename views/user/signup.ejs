@@ -1,0 +1,48 @@
+<%- include("../partials/header") %>
+<div class="row" style="margin-left: 33%;;">
+    <div class="col-md-4 col-md-offset">
+        <form action="/user/signup" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group" style="border:1px black solid; padding: 10px;">
+                        <label for="address">country</label>
+                        <input class="form-control" type="text" name="country" id="country" placeholder="country">
+                        <label for="address">state</label>
+                        <input class="form-control" type="text" name="state" id="state" placeholder="state">
+                        <label for="address">city</label>
+                        <input class="form-control" type="text" name="city" id="city" placeholder="city">
+                        <label for="address">pin</label>
+                        <input class="form-control" type="text" name="pin" id="pin" placeholder="pin">
+                        <label for="address">landmark</label>
+                        <input class="form-control" type="text" name="landmark" id="landmark" placeholder="landmark">
+                        <label for="address">apparmentName</label>
+                        <input class="form-control" type="text" name="apparmentName" id="apparmentName" placeholder="coapparmentNameuntry">
+                        <label for="address">flatNo</label>
+                        <input class="form-control" type="text" name="flatNo" id="flatNo" placeholder="flatNo">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Username</label>
+                        <input class="form-control" type="text" name="username" id="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="password" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Mobile Number</label>
+                        <input class="form-control" type="text" name="mobileNumber" id="mobileNumber" placeholder="Mobile Nummber">
+                    </div>
+                </div>
+            </div>
+            <button>Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

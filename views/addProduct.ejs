@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<div class="container">
+    <form action="/owner/addProduct" method="POST">
+        <div>
+            <input type="text" name="product[imagePath]" placeholder="imagePath">
+            <p></p>
+            <input type="text" name="product[title]" placeholder="title">
+            <p></p>
+            <textarea name="product[description]" placeholder="description"></textarea>
+            <p></p>
+            <input type="text" name="product[price]" placeholder="price">
+        </div>
+        <p></p>
+        <button class="btn btn-primary" >SUBMIT!</button>
+    </form>
+</div>
