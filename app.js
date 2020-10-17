@@ -122,7 +122,7 @@ app.get("/profile",isLoggedIn,function(req,res){
             cart = new Cart(order.cart);
             order.items = cart.generateArray();
         });
-        res.render("user/profile",{orders:orders});
+        res.render("user/profile",{orders:JSON.parse(orders)});
     });
 });
 
