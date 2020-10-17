@@ -17,7 +17,8 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect("mongodb+srv://SaayanBiswas:saayanbiswas@cluster0.hvhmf.mongodb.net/test",{ useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect("mongodb+srv://SaayanBiswas:saayanbiswas@cluster0.hvhmf.mongodb.net/<dbname>?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true }).catch(error => handleError(error));;
+
 
 //====PASSPORT======
 
